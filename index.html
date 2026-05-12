@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Политика конфиденциальности | Telegraph Messenger</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', 'Helvetica Neue', sans-serif;
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%);
+            color: #fff;
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        /* Анимированный фон */
+        .gradient-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: radial-gradient(circle at 20% 50%, rgba(102, 126, 234, 0.15) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 80%, rgba(118, 75, 162, 0.15) 0%, transparent 50%);
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem 4rem;
+        }
+
+        /* Шапка */
+        .header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding: 2rem 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .logo {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            display: inline-block;
+            animation: gentleFloat 3s ease-in-out infinite;
+        }
+
+        @keyframes gentleFloat {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            margin-bottom: 0.5rem;
+        }
+
+        .last-updated {
+            color: rgba(255, 255, 255, 0.4);
+            font-size: 0.85rem;
+            margin-top: 0.5rem;
+        }
+
+        /* Основной контент */
+        .card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border-radius: 24px;
+            padding: 2rem;
+            margin-bottom: 1.5rem;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            border-color: rgba(102, 126, 234, 0.3);
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: #667eea;
+        }
+
+        .section-title .icon {
+            font-size: 1.8rem;
+        }
+
+        h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin: 1.5rem 0 1rem;
+            color: #a78bfa;
+        }
+
+        p {
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 1rem;
+        }
+
+        ul {
+            margin: 1rem 0;
+            padding-left: 1.5rem;
+        }
+
+        li {
+            color: rgba(255, 255, 255, 0.75);
+            margin: 0.5rem 0;
+        }
+
+        .badge {
+            display: inline-block;
+            background: rgba(102, 126, 234, 0.2);
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            color: #a78bfa;
+            font-family: monospace;
+            margin-right: 0.5rem;
+        }
+
+        .encryption-box {
+            background: rgba(0, 0, 0, 0.4);
+            border-radius: 16px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-left: 3px solid #10b981;
+            font-family: 'SF Mono', 'Fira Code', monospace;
+            font-size: 0.85rem;
+        }
+
+        .encryption-box pre {
+            color: #10b981;
+            overflow-x: auto;
+            white-space: pre-wrap;
+            word-break: break-word;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 2rem;
+            margin-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            color: rgba(255, 255, 255, 0.3);
+            font-size: 0.8rem;
+        }
+
+        .contact-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 12px 28px;
+            border-radius: 40px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 1rem;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .contact-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
+        }
+
+        hr {
+            border: none;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+            margin: 2rem 0;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 1rem;
+            }
+            .card {
+                padding: 1.25rem;
+            }
+            h1 {
+                font-size: 1.6rem;
+            }
+            .section-title {
+                font-size: 1.3rem;
+            }
+        }
+
+        /* Сканер штрих-кода анимация */
+        .scan-line {
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #667eea, transparent);
+            animation: scan 8s linear infinite;
+        }
+
+        @keyframes scan {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+    </style>
+</head>
+<body>
+    <div class="gradient-bg"></div>
+    <div class="container">
+        <div class="header">
+            <div class="logo">🔒📱</div>
+            <h1>Политика конфиденциальности</h1>
+            <div class="last-updated">📅 Последнее обновление: 12 мая 2026 г.</div>
+            <div class="scan-line"></div>
+        </div>
+
+        <!-- Главный принцип -->
+        <div class="card">
+            <div class="section-title">
+                <span class="icon">🔐</span>
+                <span>Главный принцип</span>
+            </div>
+            <p>Ваши сообщения <strong>шифруются на вашем устройстве</strong> ДО отправки на сервер. Мы <strong style="color: #f87171;">НЕ имеем доступа</strong> к их содержанию. Расшифровка происходит только на устройстве получателя.</p>
+            <div class="encryption-box">
+                <pre>📨 Отправка: Ваше устройство → 🔒 AES-GCM шифрование → ☁️ Firebase → 📱 Получатель → 🔓 Расшифровка</pre>
+            </div>
+        </div>
+
+        <!-- Какие данные собираем -->
+        <div class="card">
+            <div class="section-title">
+                <span class="icon">📊</span>
+                <span>Какие данные мы собираем</span>
+            </div>
+            
+            <h3>📝 Данные, которые вы предоставляете</h3>
+            <ul>
+                <li><span class="badge">Аккаунт</span> Email, никнейм (псевдоним) — для идентификации</li>
+                <li><span class="badge">Сообщения</span> Текст, время отправки — в зашифрованном виде</li>
+                <li><span class="badge">Медиа</span> Изображения — для обмена файлами</li>
+            </ul>
+
+            <h3>🤖 Данные, собираемые автоматически</h3>
+            <ul>
+                <li><span class="badge">Устройство</span> Модель, ОС, версия приложения — для оптимизации</li>
+                <li><span class="badge">Чаты</span> Участники, время последнего сообщения</li>
+                <li><span class="badge">PIN-код</span> 🔒 Хранится <strong>ТОЛЬКО на вашем устройстве</strong> (не передаётся на сервер)</li>
+                <li><span class="badge">Настройки</span> Тема, размер шрифта — локально на устройстве</li>
+            </ul>
+        </div>
+
+        <!-- Шифрование -->
+        <div class="card">
+            <div class="section-title">
+                <span class="icon">🔒</span>
+                <span>Технологии шифрования</span>
+            </div>
+            <ul>
+                <li><span class="badge">AES-GCM</span> 256 бит — шифрование сообщений</li>
+                <li><span class="badge">PBKDF2</span> 100,000 итераций, SHA-256 — деривация ключа</li>
+                <li><span class="badge">SQLCipher</span> Шифрование локальной базы данных</li>
+                <li><span class="badge">WebRTC</span> P2P видеозвонки (медиа НЕ проходят через серверы)</li>
+            </ul>
+        </div>
+
+        <!-- Передача данных третьим лицам -->
+        <div class="card">
+            <div class="section-title">
+                <span class="icon">🔄</span>
+                <span>Передача данных третьим лицам</span>
+            </div>
+            <p>Мы <strong style="color: #f87171;">НЕ продаём</strong> и <strong style="color: #f87171;">НЕ передаём</strong> ваши данные третьим лицам, за исключением технической необходимости:</p>
+            <ul>
+                <li><span class="badge">Google Firebase</span> Хостинг, аутентификация, база данных → Email, зашифрованные сообщения, метаданные</li>
+                <li><span class="badge">Google STUN/TURN</span> Установка WebRTC соединений → IP-адрес (транзитно)</li>
+            </ul>
+        </div>
+
+        <!-- Ваши права -->
+        <div class="card">
+            <div class="section-title">
+                <span class="icon">✅</span>
+                <span>Ваши права</span>
+            </div>
+            <ul>
+                <li>✔️ <strong>Удалить аккаунт</strong> — через настройки приложения</li>
+                <li>✔️ <strong>Очистить локальный кэш</strong> — кнопка в настройках</li>
+                <li>✔️ <strong>Пожаловаться на сообщение</strong> — контекстное меню</li>
+                <li>✔️ <strong>Выйти из аккаунта</strong> — через настройки</li>
+                <li>✔️ <strong>Изменить никнейм</strong> — карточка профиля</li>
+            </ul>
+        </div>
+
+        <!-- Срок хранения -->
+        <div class="card">
+            <div class="section-title">
+                <span class="icon">⏰</span>
+                <span>Срок хранения данных</span>
+            </div>
+            <ul>
+                <li>📩 Сообщения в чатах — пока не удалены пользователем или администратором</li>
+                <li>🔑 Локальный PIN-код — до удаления приложения или очистки кэша</li>
+                <li>👤 Профиль пользователя — до удаления аккаунта</li>
+                <li>⚠️ Жалобы — 30 дней (для модерации)</li>
+            </ul>
+        </div>
+
+        <!-- Безопасность детей -->
+        <div class="card">
+            <div class="section-title">
+                <span class="icon">👶</span>
+                <span>Безопасность детей</span>
+            </div>
+            <p>Наше приложение не предназначено для детей младше 13 лет. Мы не собираем осознанно данные детей. Если вы узнали, что ваш ребёнок предоставил нам данные — свяжитесь с нами для их удаления.</p>
+        </div>
+
+        <!-- Изменения -->
+        <div class="card">
+            <div class="section-title">
+                <span class="icon">📢</span>
+                <span>Изменения в политике</span>
+            </div>
+            <p>При значительных изменениях мы уведомим вас через всплывающее уведомление в приложении. Дата последнего обновления всегда указана вверху страницы.</p>
+        </div>
+
+        <!-- Контакты -->
+        <div class="card">
+            <div class="section-title">
+                <span class="icon">📧</span>
+                <span>Контакты</span>
+            </div>
+            <p>По вопросам конфиденциальности вы можете связаться с нами:</p>
+            <ul>
+                <li>📱 Через поддержку в приложении: <strong>Настройки → Связаться с поддержкой</strong></li>
+                <li>📧 Email: <strong>anvistanb17@gmail.com</strong></li>
+            </ul>
+            <a href="mailto:anvistanb17@gmail.com" class="contact-btn">
+                📧 Написать в поддержку
+            </a>
+        </div>
+
+        <hr>
+
+        <div class="footer">
+            <p>© 2026 Telegraph Messenger. Все права защищены.</p>
+            <p style="margin-top: 8px;">🔒 Сквозное шифрование | 🛡️ Безопасность прежде всего</p>
+        </div>
+    </div>
+</body>
+</html>
